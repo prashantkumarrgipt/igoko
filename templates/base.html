@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+     {% comment %} bootstrap file {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}"> 
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- customized css  -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+   
+    <title>
+        Igasolutions {% block title %}{% endblock  %}
+    </title>
+</head>
+<body>
+
+ <!-- Spinner Start -->
+ <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+</div>
+<!-- Spinner End -->
+
+
+  <header>
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+    <div class="row gx-0">
+        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>Call Us</small>
+                <a href="https://calendly.com/igokoavionics/30min"><small class="text-light"><i class="fa fa-envelope-open me-2"></i>Schedule meeting</small></a>
+                <!-- <small class="me-3 text-light"><i class="fa-solid fa-people-group me-2"></i>Join Our Team</small> -->
+                <button type="button" class="btn btn-join-our-team header-login" data-bs-toggle="modal"
+                    data-bs-target="#jointeam" style="margin-left: 9px;">
+                    Join Our Team
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+
+ <!-- Navbar & Carousel Start -->
+ <div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <a href="/home" class="navbar-brand navbar-logo p-0">
+            <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>IGOKO</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="/home" class="nav-item nav-link active">Home</a>
+                <a href="/aboutUs" class="nav-item nav-link">About Us</a>
+                <a href="/services" class="nav-item nav-link">Services</a>
+                <a href="/careers" class="nav-item nav-link">Careers at</a>
+                <a href="/contactUs" class="nav-item nav-link">Contact</a>
+            </div>
+            <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+        </div>
+    </nav>
+
+    {% block carousel-start %}
+    {% endblock %}
+</div>
+<!-- Navbar & Carousel End -->
+
+
+
+  </header>
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+{% comment %} 
+  sign/login
+{% endcomment %}
+	<!-- SignUp Modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5" id="signupModalTitle">SignUp here</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="/signup" method='post'>
+
+						<div class="form-group mb-3">
+							<label for="username" class="form-label">Username</label>
+							<input type="text" class="form-control" id="username" name="username"
+								placeholder="Choose a unique Username (Lowercase & alphanumeric" required>
+						</div>
+						<div class="form-group mb-3">
+							<label for="fname" class="form-label">First name</label>
+							<input type="text" class="form-control" id="fname" name="fname"
+								placeholder="Enter your First name" required>
+						</div>
+						<div class="form-group mb-3">
+							<label for="lname" class="form-label">Last name</label>
+							<input type="text" class="form-control" id="lname" name="lname"
+								placeholder="Enter your Last name" required>
+						</div>
+						<div class="form-group mb-3">
+							<label for="email" class="form-label">Email address</label>
+							<input type="email" class="form-control" name="email" id="email"
+								placeholder="name@example.com" required>
+						</div>
+						<div class="form-group mb-3">
+							<label for="pass1" class="form-label">Choose a Password</label>
+							<input type="password" class="form-control" name="pass1" id="pass1"
+								placeholder="Choose a strong password" required>
+						</div>
+						<div class="form-group mb-3">
+							<label for="pass2" class="form-label">Confirm Password</label>
+							<input type="password" class="form-control" name="pass2" id="pass2"
+								placeholder="Enter you Password again" required>
+						</div>
+						{% csrf_token %}
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5" id="loginModalTitle">Login</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="/login" method='post'>
+
+						<div class="form-group mb-3">
+							<label for="loginusername" class="form-label">Username</label>
+							<input type="text" class="form-control" id="loginusername" name="loginusername"
+								placeholder="Enter your Username" required>
+						</div>
+						<div class="form-group mb-3">
+							<label for="loginpassword" class="form-label">Enter Your Password</label>
+							<input type="password" class="form-control" name="loginpassword" id="loginpassword"
+								placeholder="password" required>
+						</div>
+						{% csrf_token %}
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="container">
+
+    {% block body-content  %}
+    {% endblock  %}
+  </div>
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                    <h1 class="mb-0">Our Partners</h1>
+                </div>
+                <div class="owl-carousel vendor-carousel">
+                    <img src="{% static 'images/img/vendor-1.png' %}" alt="">
+                    <img src="{% static 'images/img/vendor-2.png' %}" alt="">
+                    <img src="{% static 'images/img/vendor-3.png' %}" alt="">
+                    <img src="{% static 'images/img/vendor-4.png' %}" alt="">
+                    <img src="{% static 'images/img/vendor-5.png' %}" alt="">
+                    <img src="{% static 'images/img/vendor-6.png' %}" alt="">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+    
+
+
+       <!-- Footer Start -->
+       <div class="container-fluid footer-background bg-dark text-light mt-5 wow" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="/home" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>IGOKO</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Last 2years of experience with more than 100+ happy customers. Stand out with website design powered by Igoko Avionics Solutions Pvt Ltd</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Get In Touch</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Karawal Nagar, North East Delhi-110094, India</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">info@igasolutions.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+91-8595049981</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Services</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Portfolio Design</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Ecommerce Website</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>SEO, SMM, ADWORDS ETC</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Laravel, PHP, ETC</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Special Projects</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Quick Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Architect Design</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Factory Design</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Artist Design</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Preconstruction & Planning</a>
+                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Special Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">IGOKO Avionics Solutions || Learn to Lead</a>. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+   <!-- Back to Top -->
+   <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+     <!-- Join our team form -->
+     <div class="modal fade join-team-border" id="jointeam" tabindex="-1" aria-labelledby="jointeamModal" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5" id="jointeamModalTitle">Fill the form</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3Rf5bthR54e3PNKlZBPXynNReTVkKSI3LlZHsw6AblXRnSw/formResponse"
+                    target="_self"
+                    id="bootstrapForm"
+                    method="POST">
+                  <fieldset>
+                      <h4>Join Our Team</h4><br>
+                        
+                  </fieldset>
+                  <fieldset>
+                      <legend for="">Email</legend>
+                      <div class="form-group">
+                          <input id="emailAddress" type="email" name="emailAddress" class="form-control" placeholder="example123@gmail.com" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "short" id: "1633920210" -->
+                  <fieldset>
+                      <legend for="1633920210">Full Name</legend>
+                      <div class="form-group">
+                          <input id="2005620554" type="text" name="entry.2005620554" class="form-control" placeholder="Your good name" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "short" id: "227649005" -->
+                  <fieldset>
+                      <legend for="227649005">Email</legend>
+                      <div class="form-group">
+                          <input id="1045781291" type="text" name="entry.1045781291" class="form-control" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "paragraph" id: "790080973" -->
+                  <fieldset>
+                      <legend for="790080973">Address</legend>
+                      <div class="form-group">
+                          <textarea id="1065046570" name="entry.1065046570" class="form-control" placeholder="Karawal Nagar, North East Delhi-110094, India" required></textarea>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "short" id: "1770822543" -->
+                  <fieldset>
+                      <legend for="1770822543">Phone number(Same as Whats&#x27;App)</legend>
+                      <div class="form-group">
+                          <input id="1166974658" type="text" name="entry.1166974658" class="form-control" placeholder="1234567890" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "choices" id: "1044780646" -->
+                  <fieldset>
+                      <legend for="1044780646">Gender</legend>
+                      <div class="form-group">
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.421131622" value="Male" required>
+                                  Male
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.421131622" value="Female" required>
+                                  Female
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.421131622" value="__other_option__" required>
+                              </label>
+                              <input type="text" name="entry.421131622.other_option_response" placeholder="custom value">
+                          </div>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "short" id: "548536383" -->
+                  <fieldset>
+                      <legend for="548536383">Name of Institute(College Name/University Name/School Name)</legend>
+                      <div class="form-group">
+                          <input id="1431601284" type="text" name="entry.1431601284" class="form-control" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "short" id: "2132169759" -->
+                  <fieldset>
+                      <legend for="2132169759">Address of Institute</legend>
+                      <div class="form-group">
+                          <input id="1392464989" type="text" name="entry.1392464989" class="form-control" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "dropdown" id: "2008280715" -->
+                  <fieldset>
+                      <legend for="2008280715">Highest Academic Qualification 
+                  Most recent or currently pursuing academic degree 
+                  Note:- If you&#x27;re a School student please select others</legend>
+                      <div class="form-group">
+                          <select id="2008280715" name="entry.971161481" class="form-control">
+                              <option value="B.A/B.Com/BBA/B.Ed/Diploma">B.A/B.Com/BBA/B.Ed/Diploma</option>
+                              <option value="BCA/B.Tech/BE/B.Sc">BCA/B.Tech/BE/B.Sc</option>
+                              <option value="M.A/M.Com/MBA/MCA/M.Ed/PG Diploma/PG Program">M.A/M.Com/MBA/MCA/M.Ed/PG Diploma/PG Program</option>
+                              <option value="MCA/M.Tech/M.Sc">MCA/M.Tech/M.Sc</option>
+                              <option value="Others">Others</option>
+                          </select>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "choices" id: "874172436" -->
+                  <fieldset>
+                      <legend for="874172436">How much time could you spend at per day? </legend>
+                      <div class="form-group">
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.29694913" value="&lt;2hour" required>
+                                  &lt;2hour
+                              </label>
+                          </div>
+                              <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.29694913" value="3-4hours" required>
+                                  3-4hours
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.29694913" value="5hours" required>
+                                  5hours
+                              </label>
+                          </div>
+                          <div class="radio custom">
+                              <label>
+                                  <input type="radio" name="entry.29694913" value="__other_option__" required>
+                              </label>
+                              <input class="custom-cs" type="text" name="entry.29694913.other_option_response" placeholder="custom value">
+                          </div>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "checkboxes" id: "21421319" -->
+                  <fieldset>
+                      <legend for="21421319">If you are a student, interested in this internship, please indicate which part(s) of the day you would be available </legend>
+                      <div class="form-group">
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1327019249" value="First Half" required>
+                                  First Half
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1327019249" value="Second Half" required>
+                                  Second Half
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1327019249" value="Full time" required>
+                                  Full time
+                              </label>
+                          </div>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "date" id: "988039938" -->
+                  <fieldset>
+                      <legend for="988039938">What is your preferred start date for an internship? *
+                  This is not a binding answer that locks you in -- it&#x27;s just to help us get an idea of the timeframe that you have in mind. </legend>
+                      <div class="form-group">
+                          <input type="date" id="1208564959_date" placeholder="6/29/2023" class="form-control calendar" required>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "choices" id: "627443277" -->
+                  <fieldset>
+                      <legend for="627443277">Which field/sector you interest most in this Internship</legend>
+                      <div class="form-group">
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Campaign manager" required>
+                                  Campaign manager
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Business Development Assicoate (BDA)" required>
+                                  Business Development Assicoate (BDA)
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Human Resorce (HR)" required>
+                                  Human Resorce (HR)
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Social Media Marketing intern" required>
+                                  Social Media Marketing intern
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Digital marketing Intern" required>
+                                  Digital marketing Intern
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Web Developer" required>
+                                  Web Developer
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Graphic Designer" required>
+                                  Graphic Designer
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="Campus Ambassder" required>
+                                  Campus Ambassder
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1867054181" value="__other_option__" required>
+                              </label>
+                              <input type="text" name="entry.1867054181.other_option_response" placeholder="custom value">
+                          </div>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "choices" id: "2004491194" -->
+                  <fieldset>
+                      <legend for="2004491194">Do you have a Desktop/laptop or a Smartphone with proper Internet connection</legend>
+                      <div class="form-group">
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1288823731" value="Yes" required>
+                                  Yes
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="entry.1288823731" value="No" required>
+                                  No
+                              </label>
+                          </div>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "paragraph" id: "1846923513" -->
+                  <fieldset>
+                      <legend for="1846923513">Any Suggestion/opinion please share 
+                  This is the open platform in which you can share your valuable thaughts,idea,suggestion.</legend>
+                      <div class="form-group">
+                          <textarea id="839337160" name="entry.839337160" class="form-control" ></textarea>
+                      </div>
+                  </fieldset>
+              
+              
+                  <!-- Field type: "checkboxes" id: "200304687" -->
+                  <fieldset>
+                      <legend for="200304687">Internship you&#x27;re looking for?</legend>
+                      <div class="form-group" style="margin-bottom: 18px;">
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="Internship for college credit" required>
+                                  Internship for college credit
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="Summer Internship" required>
+                                  Summer Internship
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="Non-profit Internship" required>
+                                  Non-profit Internship
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="Co-OP(Coperative Education)" required>
+                                  Co-OP(Coperative Education)
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="Externship" required>
+                                  Externship
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="Learning purpose" required>
+                                  Learning purpose
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" name="entry.1380449874" value="__other_option__" required>
+                              </label>
+                              <input type="text" name="entry.1380449874.other_option_response" placeholder="custom value">
+                          </div>
+                      </div>
+                  </fieldset>
+              
+                  <input type="hidden" name="fvv" value="1">
+                  <input type="hidden" name="fbzx" value="-5069890242777060795">
+                  <!--
+                      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+                  -->
+                  <input type="hidden" name="pageHistory" value="0">
+              
+                  <input class="btn btn-primary" type="submit" value="Submit">
+              </form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+<!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

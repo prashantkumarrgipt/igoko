@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}- Services{% endblock title %}
+{% block carousel-start %}
+<div class="container-fluid bg-primary py-5 bg-header">
+    <div class="row py-5">
+        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+            <h1 class="display-4 text-white animated zoomIn">Services</h1>
+            <a href="" class="h5 text-white">Home</a>
+            <i class="far fa-circle text-white px-2"></i>
+            <a href="" class="h5 text-white">Services</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block body-content %}
+    <!-- Service Start -->
+    <div class="container-fluid facts-background py-5 wow" data-wow-delay="0.1s">
+        <div class="container py-5 fadeInUp">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
+                <h1 class="mb-0">Value added <span>WebDesign Services</span></h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #fed8b1;">
+                        <div class="service-icon">
+                            <i class="fa fa-code text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Web Design</h4>
+                        <p class="m-0">We've delivered outstanding projects for dentists, events, interior design, gyms, yoga, and more. Explore our portfolio for a glimpse of our success.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.6s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #c5e1a5;">
+                        <div class="service-icon">
+                            <i class="fa fa-chart-pie text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Digital Marketing</h4>
+                        <p class="m-0">Empowering online success. SEO, PPC, social media, and more. Elevate your brand, achieve growth. Partner with us.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.9s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #b3e5fc;">
+                        <div class="service-icon">
+                            <i class="fa fa-shield-alt text-white"></i>
+                        </div>
+                        <h4 class="mb-3">SEO Services</h4>
+                        <p class="m-0">Enhance online visibility with our tailored SEO solutions. Drive organic traffic and optimize your online presence for success.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #ffcdd2;">
+                        <div class="service-icon">
+                            <i class="fab fa-android text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Email Marketing</h4>
+                        <p class="m-0">Powerful email marketing campaigns that engage and convert. Connect with your audience, drive results. Partner with us for success.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #e1bee7;">
+                        <div class="service-icon">
+                            <i class="fa fa-search text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Social Media</h4>
+                        <p class="m-0">Master social media marketing with us. Stay ahead in the ever-changing landscape. Drive tangible business outcomes, not just likes and followers.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.9s">
+                    <div class="position-relative rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5" style="background-color: #dcedc8;">
+                        <h3 class="mb-3">Call Us For Quote</h3>
+                        <p class="m-0">Unlock the best pricing for your needs - call us now for a personalized quote.</p>
+                        <h2 class="services-no mb-0">+91-8595049981</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+       <!-- Testimonial Start -->
+       <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
+                <h1 class="mb-0">Love from Clients</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-1.jpg' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Neha Mishra,</h4>
+                            <small class="text-uppercase">Founder & CMD</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Excellent organization have been trusting them for a while now. Very impressed.
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-2.jpg' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Ashok Verma,</h4>
+                            <small class="text-uppercase">Founder</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        There service are beyond words! Never seen someone so quick, efficient and perfect.
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-3.jpg' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Mayank Jain,</h4>
+                            <small class="text-uppercase">Event Coordinator</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        They have been developing the mobile app for my events, Great Work! Nice Team!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+{% endblock body-content %}

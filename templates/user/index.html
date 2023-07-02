@@ -1,0 +1,515 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}- Home{% endblock title %}
+
+
+{% block carousel-start %}
+<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100" src="{% static 'images/img/carousel-bg.png' %}" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 900px;">
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Digital Media Company</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">for Your Ideas</h1>
+                    <a href="/quote" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Start Now</a>
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Watch Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="{% static 'images/img/carousel-bg.png' %}" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 900px;">
+                    <h5 class="text-white text-uppercase mb-3">Digital Media Company</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">for Business</h1>
+                    <a href="/quote" class="btn btn-primary py-md-3 px-md-5 me-3">Start Now</a>
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5">Watch Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="w-100" src="{% static 'images/img/carousel-bg.png' %}" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 900px;">
+                    <h5 class="text-white text-uppercase mb-3">Digital Media Company</h5>
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">to Sell Online</h1>
+                    <a href="/quote" class="btn btn-primary py-md-3 px-md-5 me-3">Start Now</a>
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5">Watch Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% endblock carousel-start %}
+{% block body-content %}
+
+ 
+
+
+   
+    <!-- Facts Start -->
+    <div class="container-fluid facts-background facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="shadow d-flex align-items-center justify-content-center p-4" style="height: 150px; background-color: #ffcdd2;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Happy Clients</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="shadow d-flex align-items-center justify-content-center p-4" style="height: 150px; background-color: #e1bee7;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-dark mb-0">Projects Done</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="shadow d-flex align-items-center justify-content-center p-4" style="height: 150px; background-color: #ffcdd2;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Win Awards</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts Start -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid about-background py-5 wow" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+                        <h1 class="mb-0">Powerful Digital <span>Media Company</span></h1>
+                    </div>
+                    <p class="mb-4">We love to create. We at Igoko Avioncs Solutions provides you different kind of digital solutions. Digital Marketing, SEO, Graphic Designing, Anylatics, Adwords, Web Designing, Web Solutions, Branding, Social Media Marketing, Film & Advertisment, Model Photoshoot etc. We have a experience of more than 4years & having many trustable clients.</p>
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Call to ask any question</h5>
+                            <h4 class="text-primary mb-0">+91-8595049981</h4>
+                        </div>
+                    </div>
+                    <a href="/quote" class="btn rounded btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Know More</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'images/img/about-img.png' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <section id="parallax" class="parallax">
+        <div class="parallax-background"></div>
+        <div class="parallax-content">
+            <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                  <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
+                  <h1 class="mb-0 text-dark">We Are Here to Grow Your Business Exponentially</h1>
+                </div>
+                <div class="row g-5">
+                  <div class="col-lg-4">
+                    <div class="row g-5">
+                      <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                        <div class="d-flex justify-content-center">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-cubes text-white"></i>
+                            </div>
+                        </div>
+                        <h4>Best In Industry</h4>
+                        <p class="mb-0 text-dark">We deliver best-in-industry services, empowering businesses to thrive in the digital landscape.</p>
+                      </div>
+                      <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="d-flex justify-content-center">
+                        <div class="bg-primary position-relative rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                          <i class="fa fa-award text-white"></i>
+                        </div>
+                    </div>
+                        <h4>Happy Clients</h4>
+                        <p class="mb-0">Our dedication to excellence has resulted in a multitude of happy clients who have achieved remarkable success and growth with our services.</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                    {% comment %} <div class="position-relative h-100">
+                      <img class="position-relative w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.jpg" style="object-fit: cover;">
+                    </div> {% endcomment %}
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="row g-5">
+                      <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                        <div class="d-flex justify-content-center">
+                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                          <i class="fa fa-users-cog text-white"></i>
+                        </div>
+                    </div>
+                        <h4>Professional Staff</h4>
+                        <p class="mb-0">Our team of highly skilled and professional staff members brings a wealth of expertise and experience to deliver top-notch solutions for our clients.</p>
+                      </div>
+                      <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                        <div class="d-flex justify-content-center">
+                          <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                    </div>
+                        <h4>24/7 Support</h4>
+                        <p class="mb-0">We pride ourselves on offering round-the-clock support, ensuring that our clients have access to assistance and guidance whenever they need it, 24/7.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      
+
+    <!-- Features Start -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid facts-background py-5 wow" data-wow-delay="0.1s">
+        <div class="container py-5 fadeInUp">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
+                <h1 class="mb-0">Value added <span>WebDesign Services</span></h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #fed8b1;">
+                        <div class="service-icon">
+                            <i class="fa fa-code text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Web Design</h4>
+                        <p class="m-0">We've delivered outstanding projects for dentists, events, interior design, gyms, yoga, and more. Explore our portfolio for a glimpse of our success.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.6s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #c5e1a5;">
+                        <div class="service-icon">
+                            <i class="fa fa-chart-pie text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Digital Marketing</h4>
+                        <p class="m-0">Empowering online success. SEO, PPC, social media, and more. Elevate your brand, achieve growth. Partner with us.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.9s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #b3e5fc;">
+                        <div class="service-icon">
+                            <i class="fa fa-shield-alt text-white"></i>
+                        </div>
+                        <h4 class="mb-3">SEO Services</h4>
+                        <p class="m-0">Enhance online visibility with our tailored SEO solutions. Drive organic traffic and optimize your online presence for success.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #ffcdd2;">
+                        <div class="service-icon">
+                            <i class="fab fa-android text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Email Marketing</h4>
+                        <p class="m-0">Powerful email marketing campaigns that engage and convert. Connect with your audience, drive results. Partner with us for success.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item rounded d-flex flex-column align-items-center justify-content-center text-center" style="background-color: #e1bee7;">
+                        <div class="service-icon">
+                            <i class="fa fa-search text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Social Media</h4>
+                        <p class="m-0">Master social media marketing with us. Stay ahead in the ever-changing landscape. Drive tangible business outcomes, not just likes and followers.</p>
+                        <a class="btn btn-lg btn-primary" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn service-bg" data-wow-delay="0.9s">
+                    <div class="position-relative rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5" style="background-color: #dcedc8;">
+                        <h3 class="mb-3">Call Us For Quote</h3>
+                        <p class="m-0">Unlock the best pricing for your needs - call us now for a personalized quote.</p>
+                        <h2 class="services-no mb-0">+91-8595049981</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid bg-light pricing-background py-5 wow" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">BEST MARKET PLAN & PACKAGE</h5>
+                <h1 class="mb-0">Flexible Pricing Plans</h1>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-4 pricing-container wow zoomInDown" data-wow-delay="0.6s">
+                    <div class="bg-light pricing-border1 rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary text-uppercase mb-1">PORTFOLIO</h4>
+                        </div>
+                        <div class="p-5 pt-0 pricing-content">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₹</small>10,500<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Year</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Domain</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Maintenance</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>WordPress Platform</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Fully Customizable</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>3 Months Service Free</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="orders.html" class="btn btn-primary py-2 px-4 mt-4">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pricing-container wow zoomInDown" data-wow-delay="0.3s">
+                    <div class="bg-white pricing-border2 rounded shadow position-relative" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1 text-uppercase">E-commerce</h4>
+                        </div>
+                        <div class="p-5 pt-0 pricing-content">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₹</small>25,000<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Year</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Domain</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Maintenance</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>WordPress Platform</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Fully Customizable</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>3 Months Service Free</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="/orders" class="btn btn-primary py-2 px-4 mt-4">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pricing-container wow zoomInDown" data-wow-delay="0.9s">
+                    <div class="bg-light pricing-border1 rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1 text-uppercase">Portal</h4>
+                        </div>
+                        <div class="p-5 pt-0 pricing-content">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₹</small>28,900<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Year</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Domain</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Maintenance</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>WordPress Platform</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Fully Customizable</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>3 Months Service Free</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="/orders" class="btn btn-primary py-2 px-4 mt-4">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pricing-container wow zoomInUp" data-wow-delay="0.9s">
+                    <div class="bg-light pricing-border1 rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1 text-uppercase">Mini-Portfolio</h4>
+                        </div>
+                        <div class="p-5 pt-0 pricing-content">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₹</small>7,500<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Year</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Domain</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Maintenance</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>WordPress Platform</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Fully Customizable</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>3 Months Service Free</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="/orders" class="btn btn-primary py-2 px-4 mt-4">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pricing-container wow zoomInUp" data-wow-delay="0.3s">
+                    <div class="bg-white pricing-border2 rounded shadow position-relative" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1 text-uppercase">Mini-Ecommerce</h4>
+                        </div>
+                        <div class="p-5 pt-0 pricing-content">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₹</small>9,000<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Year</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Domain</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Maintenance</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>WordPress Platform</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Fully Customizable</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>3 Months Service Free</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="/orders" class="btn btn-primary py-2 px-4 mt-4">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pricing-container wow zoomInUp" data-wow-delay="0.9s">
+                    <div class="bg-light pricing-border1 rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1 text-uppercase">App Development</h4>
+                        </div>
+                        <div class="p-5 pt-0 pricing-content">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₹</small>12,000<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Year</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Domain</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>One Year Maintenance</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>WordPress Platform</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Fully Customizable</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>3 Months Service Free</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="/orders" class="btn btn-primary py-2 px-4 mt-4">Purchase Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid facts-background py-5 wow" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Follow US</h5>
+                        <h1 class="mb-0">Subscribe for Newsletter</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Get notified about upcoming updates</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s" style="background: linear-gradient(to right, #00e5ff, #1200ff);">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-xl-12">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn w-100 py-3" type="submit">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 wow" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
+                <h1 class="mb-0">Love from Clients</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-1.jpg' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Neha Mishra,</h4>
+                            <small class="text-uppercase">Founder & CMD</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Excellent organization have been trusting them for a while now. Very impressed.
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-2.jpg' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Ashok Verma,</h4>
+                            <small class="text-uppercase">Founder</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        There service are beyond words! Never seen someone so quick, efficient and perfect.
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-3.jpg' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Mayank Jain,</h4>
+                            <small class="text-uppercase">Event Coordinator</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        They have been developing the mobile app for my events, Great Work! Nice Team!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+{% endblock body-content %}
