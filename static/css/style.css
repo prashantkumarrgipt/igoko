@@ -430,7 +430,7 @@ h6,
         -webkit-text-fill-color: transparent;
 }
 
-.d-flex .d-flex {
+.small-box .small-gradient-box {
     background: radial-gradient(circle, #1200ff, #00e5ff);
 }
 
@@ -461,7 +461,6 @@ h6,
 }
 
 #parallax {
-    height: 700px;
     background-image: url('../images/img/parallax-bg.png');
     background-position: center;
     background-size: cover;
@@ -733,28 +732,28 @@ h6,
 
 /* join our team form */
 /* Modal styles */
-.modal-header {
+.modle-header {
     background: linear-gradient(#00e5ff, #1200ff);
     color: white;
   }
   
-  .modal-title {
+  .modle-title {
     color: white;
   }
   
-  .modal-body {
+  .modle-body {
     padding: 20px;
     background-color: #EEF9FF;
   }
 
-  .modal-body h4 {
+  .modle-body h4 {
     background: linear-gradient(to right, #00e5ff, #1200ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 2rem;
   }
   
-  .modal-footer {
+  .modle-footer {
     border-top: none;
   }
   
@@ -1002,7 +1001,8 @@ element.style {
 }
 
 .box-ui {
-    margin: -8% auto 3%;
+    
+    margin: -8% auto;
     display: flex;
 }
 

@@ -47,7 +47,7 @@
         <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
                 <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>Call Us</small>
-                <a href="https://calendly.com/igokoavionics/30min"><small class="text-light"><i class="fa fa-envelope-open me-2"></i>Schedule meeting</small></a>
+                <a class="nav-link" href="https://calendly.com/igokoavionics/30min"><small class="text-light"><i class="fa fa-envelope-open me-2"></i>Schedule meeting</small></a>
                 <!-- <small class="me-3 text-light"><i class="fa-solid fa-people-group me-2"></i>Join Our Team</small> -->
                 <button type="button" class="btn btn-join-our-team header-login" data-bs-toggle="modal"
                     data-bs-target="#jointeam" style="margin-left: 9px;">
@@ -102,11 +102,11 @@
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+            <div class="modal-content" >
                 <div class="modal-header border-0">
                     <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="modal-body d-flex align-items-center justify-content-center bg-transparent">
                     <div class="input-group" style="max-width: 600px;">
                         <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
                         <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
@@ -118,7 +118,7 @@
     <!-- Full Screen Search End -->
 
 
-  <div class="container" style="margin-top:80px;">
+  <div style="margin-top:80px;">
 
     {% block body-content  %}
     {% endblock  %}
@@ -243,11 +243,11 @@
      <div class="modal fade join-team-border" id="jointeam" tabindex="-1" aria-labelledby="jointeamModal" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h2 class="modal-title fs-5" id="jointeamModalTitle">Fill the form</h2>
+				<div class="modal-header modle-header">
+					<h2 class="modal-title modle-title fs-5" id="jointeamModalTitle">Fill the form</h2>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body modle-body">
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3Rf5bthR54e3PNKlZBPXynNReTVkKSI3LlZHsw6AblXRnSw/formResponse"
                     target="_self"
                     id="bootstrapForm"
@@ -583,7 +583,7 @@
                   <input class="btn btn-primary" type="submit" value="Submit">
               </form>
 				</div>
-				<div class="modal-footer">
+				<div class="modal-footer modle-footer">
 				</div>
 			</div>
 		</div>
