@@ -46,7 +46,8 @@
     <div class="row gx-0">
         <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>Call Us</small>
+                <a href="tel:+917532032523">
+                <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>Call Us</small></a>
                 <a href="https://calendly.com/igokoavionics/30min"><small class="text-light"><i class="fa fa-envelope-open me-2"></i>Schedule meeting</small></a>
                 <!-- <small class="me-3 text-light"><i class="fa-solid fa-people-group me-2"></i>Join Our Team</small> -->
                 <button type="button" class="btn btn-join-our-team header-login" data-bs-toggle="modal"
@@ -80,11 +81,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="/home" class="nav-item nav-link active">Home</a>
-                <a href="/aboutUs" class="nav-item nav-link">About Us</a>
-                <a href="/services" class="nav-item nav-link">Services</a>
-                <a href="/blog" class="nav-item nav-link">Blog</a>
-                <a href="/contactUs" class="nav-item nav-link">Contact</a>
+                <a href="/home" class="nav-item nav-link {% block activehome %}{% endblock  %}">Home</a>
+                <a href="/aboutUs" class="nav-item nav-link {% block activeabout %}{% endblock  %}">About Us</a>
+                <a href="/services" class="nav-item nav-link {% block activeservice %}{% endblock  %}">Services</a>
+                <a href="/blog" class="nav-item nav-link {% block activeblog %}{% endblock  %}">Blog</a>
+                <a href="/contactUs" class="nav-item nav-link {% block activecontact %}{% endblock  %}">Contact</a>
             </div>
             <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
         </div>
