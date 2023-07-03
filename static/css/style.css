@@ -401,7 +401,7 @@ h6,
 
 /* facts start */
 .facts-background {
-    background-image: url('../img/facts-bg.png');
+    background-image: url('../images/img/facts-bg.png');
 }
 
 .container-fluid .fa-users {
@@ -413,7 +413,7 @@ h6,
 
 /* about start */
 .about-background {
-    background-image: url('../img/about-bg.png');
+    background-image: url('../images/img/about-bg.png');
     background-size: cover;
 }
 
@@ -462,7 +462,7 @@ h6,
 
 #parallax {
     height: 700px;
-    background-image: url('../img/parallax-bg.png');
+    background-image: url('../images/img/parallax-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -703,7 +703,7 @@ h6,
 
 /* footer start */
 .footer-background {
-    background-image: url('../img/footer-bg.png');
+    background-image: url('../images/img/footer-bg.png');
 }
 
 .footer-about .flex-column {
@@ -859,7 +859,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-bg.png) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/img/carousel-bg.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -901,7 +901,7 @@ h6,
 
 /* order section start */
 .gradient-custom {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-bg.png) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/img/carousel-bg.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -1188,7 +1188,7 @@ dl, ul, ul li {
 
 .recent-warpper {
     background-color: #00e5ff;
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/portfolio-bg.png) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/img/portfolio-bg.png) center center no-repeat;
     background-size: cover;
 }
 .recent-warpper {
