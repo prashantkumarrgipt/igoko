@@ -147,7 +147,17 @@
     </div>
     <!-- Vendor End -->
     
+<!-- feedback from client -->
+<div class="row d-flex justify-content-center align-item-center">
+    <div class="col-sm-7">
+      <p class="text-center fs-4 my-4" onclick="LoveFromClientBox()" id="formClick" style="cursor: pointer;">Share your Lovely Feedback</p>
+          
+      <div class="row shadow mb-3" id="formBoxText">
 
+      </div>
+    </div>
+  </div>
+<!-- end feedback from client -->
 
        <!-- Footer Start -->
        <div class="container-fluid footer-background bg-dark text-light mt-5 wow" data-wow-delay="0.1s">
@@ -612,5 +622,44 @@
 
 <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+
+
+
+    <!-- custom Javascript  start-->
+
+    <script>
+        
+let LoveFromClientBox = () => {
+        let feedbackform = `<form action="" method="post">
+                    {% csrf_token %}
+                        <div class="col form-floating mb-3">
+                          <input type="text" name="fname" class="form-control form-control-lg" id="floatingInput" placeholder="First Name" required>
+                          <label for="floatingInput">First Name</label>
+                        </div>
+                        <div class="col form-floating mb-3">
+                          <input type="text" name="lname" class="form-control form-control-lg" id="floatingInput" placeholder="Last Name">
+                          <label for="floatingInput">Last Name</label>
+                        </div>
+                        <br>
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Enter Your E-mail" required>
+                            <label for="floatingInput">Enter Your E-mail:-</label>
+                          </div>
+                        <br>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" style="resize:none; height: 200px;" cols="40" name="msgBox" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+                            <label for="floatingTextarea2">Enter Your Comment:-</label>
+                          </div>
+                          <div class="input-group mb-3">
+                            <input class="btn btn-outline-dark" type="submit" value="Send Feedback">
+                          </div>
+                        </form>`;
+        document.getElementById("formBoxText").innerHTML = feedbackform;
+      }
+      
+    </script>
+    <!-- custom Javascript  end-->
+
+
 </body>
 </html>
