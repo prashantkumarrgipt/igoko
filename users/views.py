@@ -22,7 +22,15 @@ def services(request):
 
 
 def contact(request):
-    return render(request, 'user/contactus.html')
+    save=False
+    if request.method == "POST":
+        Name=request.POST.get('name')
+        Email=request.POST.get('email')
+        Subject=request.POST.get('subject')
+        Message=request.POST.get('message')
+        contactus(name=Name,subject=Subject,email=Email,message=Message).save()
+        save=True
+    return render(request, 'user/contactus.html', context={"message" : save})
 
 def quote(request):
     return render(request, 'user/quote.html')
