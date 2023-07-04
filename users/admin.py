@@ -14,3 +14,8 @@ admin.site.register(contactus,contactusAdmin)
 class productAdmin(admin.ModelAdmin):
     list_display=('id','title','image')
 admin.site.register(product,productAdmin)
+
+
+class loveFromClientAdmin(admin.ModelAdmin):
+    list_display=('id','clientName','clientProfession','clientMessage','clientImage')
+admin.site.register(loveFromClient,loveFromClientAdmin)

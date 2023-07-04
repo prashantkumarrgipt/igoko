@@ -32,3 +32,14 @@ class product(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to="static/services/products", null=True)
     url = models.CharField(max_length=100, default=' ')
+
+
+# love from client models start 
+
+class loveFromClient(models.Model):
+    clientName = models.CharField(max_length=100)
+    clientProfession = models.CharField(max_length=200)
+    clientImage = models.ImageField(upload_to="static/LoveFromClient/Client Image", null=True)
+    clientMessage = models.TextField()
+
+ # love from client models end       

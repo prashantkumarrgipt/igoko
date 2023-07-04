@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}- Services{% endblock title %}
+
+
 {% block activeservice %}active{% endblock  %}
+
 {% block carousel-start %}
 <div class="container-fluid bg-primary py-5 bg-header">
     <div class="row py-5">
@@ -14,6 +18,8 @@
     </div>
 </div>
 {% endblock %}
+
+
 {% block body-content %}
     <!-- Service Start -->
     <div class="container-fluid facts-background py-5 wow" data-wow-delay="0.1s">
@@ -103,42 +109,26 @@
                 <h1 class="mb-0">Love from Clients</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+
+               {% for client in clientFeed %}
+
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-1.jpg' %}" style="width: 60px; height: 60px;" >
+                        <img class="img-fluid rounded" src="/{{client.clientImage}}" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
-                            <h4 class="text-primary mb-1">Neha Mishra,</h4>
-                            <small class="text-uppercase">Founder & CMD</small>
+                            <h4 class="text-primary mb-1">{{client.clientName}},</h4>
+                            <small class="text-uppercase">{{client.clientProfession}}</small>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                        Excellent organization have been trusting them for a while now. Very impressed.
+                        {{client.clientMessage}}
                     </div>
                 </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-2.jpg' %}" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Ashok Verma,</h4>
-                            <small class="text-uppercase">Founder</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        There service are beyond words! Never seen someone so quick, efficient and perfect.
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="{% static 'images/img/testimonial-3.jpg' %}" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Mayank Jain,</h4>
-                            <small class="text-uppercase">Event Coordinator</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        They have been developing the mobile app for my events, Great Work! Nice Team!
-                    </div>
-                </div>
+
+
+                {% endfor %} 
+                
+        
             </div>
         </div>
     </div>

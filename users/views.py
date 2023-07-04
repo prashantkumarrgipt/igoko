@@ -17,8 +17,9 @@ def about(request):
 
 
 def services(request):
-    
-    return render(request, 'user/services.html')
+    client=loveFromClient.objects.all().order_by('-id')
+    feedback = {"clientFeed":client}
+    return render(request, 'user/services.html',feedback)
 
 
 def contact(request):
