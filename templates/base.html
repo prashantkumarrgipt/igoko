@@ -150,7 +150,9 @@
 <!-- feedback from client -->
 <div class="row d-flex justify-content-center align-item-center">
     <div class="col-sm-7">
-      <p class="text-center fs-4 my-4" onclick="LoveFromClientBox()" id="formClick" style="cursor: pointer;">Share your Lovely Feedback</p>
+      <p class="text-center fs-4 my-4"> <b onclick="LoveFromClientBox()" style="cursor: pointer;">
+        <i class="bi bi-pencil-square text-primary"></i> Share your Lovely Feedback
+      </b></p>
           
       <div class="row shadow mb-3" id="formBoxText">
 
@@ -632,6 +634,10 @@
 let LoveFromClientBox = () => {
         let feedbackform = `<form action="" method="post">
                     {% csrf_token %}
+                    <div class="d-flex justify-content-between">
+					<h2 class="fs-5 m-3">Share Your Value-able Feedback</h2>
+					<button type="button" class="btn-close m-3" onclick="closeFeedbackSection()" style=""></button>
+				</div>
                         <div class="col form-floating mb-3">
                           <input type="text" name="fname" class="form-control form-control-lg" id="floatingInput" placeholder="First Name" required>
                           <label for="floatingInput">First Name</label>
@@ -656,7 +662,10 @@ let LoveFromClientBox = () => {
                         </form>`;
         document.getElementById("formBoxText").innerHTML = feedbackform;
       }
-      
+let closeFeedbackSection = () =>{
+    
+    document.getElementById("formBoxText").innerHTML = "";
+}
     </script>
     <!-- custom Javascript  end-->
 
