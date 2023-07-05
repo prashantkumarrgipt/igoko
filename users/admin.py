@@ -21,3 +21,9 @@ admin.site.register(loveFromClient,loveFromClientAdmin)
 class requestQuoteAdmin(admin.ModelAdmin):
     list_display=('id','Name','Email','SelectedService','Message')
 admin.site.register(requestQuote,requestQuoteAdmin)
+
+
+
+class blogSiteBackendAdmin(admin.ModelAdmin):
+    list_display=('id','blogRelatedTitle','blogImage','writterName','publishDate','blogTitle','blogDetail')
+admin.site.register(blogSiteBackend,blogSiteBackendAdmin)
