@@ -46,7 +46,7 @@ def quote(request):
     return render(request, 'user/quote.html', context={"Quote": save})
 
 def blog(request):
-    return render(request, 'user/blog.html')
+    return render(request, 'user/blogList.html')
 
 def features(request):
     return render(request,'user/feature.html')
@@ -57,8 +57,7 @@ def order(request):
 def price(request):
     return render(request,'user/price.html')
 
-
-def details(request):
+def blogDetail(request):
     return render(request,'user/blogDetails.html')
 # signup
 def handleSignUp(request):
