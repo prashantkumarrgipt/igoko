@@ -8,8 +8,9 @@ from django.contrib.auth.models import User
 
 
 def home(request):
-  
-    return render(request, 'user/index.html')
+    client=loveFromClient.objects.all().order_by('-id')
+    feedback = {"clientFeed":client}
+    return render(request, 'user/index.html',feedback)
 
 
 def about(request):
@@ -34,7 +35,15 @@ def contact(request):
     return render(request, 'user/contactus.html', context={"message" : save})
 
 def quote(request):
-    return render(request, 'user/quote.html')
+    save = False
+    if request.method == "POST":
+        Name = request.POST.get('Name')
+        Email = request.POST.get('Email')
+        Service = request.POST.get('Service')
+        Message = request.POST.get('Message')
+        requestQuote(Name=Name,Email=Email,SelectedService=Service,Message=Message).save()
+        save = True
+    return render(request, 'user/quote.html', context={"Quote": save})
 
 def blog(request):
     return render(request, 'user/blog.html')

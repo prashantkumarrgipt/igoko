@@ -1,9 +1,6 @@
 from django.contrib import admin
 from .models import *
 # Register your models here.
-class newsletterAdmin(admin.ModelAdmin):
-    list_display=('id','name','email','number','service_options','specialNotes')
-admin.site.register(newsletter,newsletterAdmin)
 
 
 class contactusAdmin(admin.ModelAdmin):
@@ -19,3 +16,8 @@ admin.site.register(product,productAdmin)
 class loveFromClientAdmin(admin.ModelAdmin):
     list_display=('id','clientName','clientProfession','clientMessage','clientImage')
 admin.site.register(loveFromClient,loveFromClientAdmin)
+
+
+class requestQuoteAdmin(admin.ModelAdmin):
+    list_display=('id','Name','Email','SelectedService','Message')
+admin.site.register(requestQuote,requestQuoteAdmin)
