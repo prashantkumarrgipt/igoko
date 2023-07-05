@@ -25,5 +25,5 @@ admin.site.register(requestQuote,requestQuoteAdmin)
 
 
 class blogSiteBackendAdmin(admin.ModelAdmin):
-    list_display=('id','blogRelatedTitle','blogImage','writterName','publishDate','blogTitle','blogDetail')
+    list_display=('id','blogRelatedTitle','blogImage','writterName','publishDate','blogTitle')
 admin.site.register(blogSiteBackend,blogSiteBackendAdmin)
