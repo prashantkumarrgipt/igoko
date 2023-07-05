@@ -56,6 +56,10 @@ def order(request):
 
 def price(request):
     return render(request,'user/price.html')
+
+
+def details(request):
+    return render(request,'user/blogDetails.html')
 # signup
 def handleSignUp(request):
     if request.method=="POST":
