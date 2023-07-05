@@ -4,7 +4,7 @@
 {% block activeblog %}active{% endblock  %}
 
 {% block carousel-start %}
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid bg-primary py-5 bg-header">
     <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
             <h1 class="display-4 text-white animated zoomIn">Blog</h1>
@@ -22,8 +22,183 @@
    <div class="container-fluid py-5 wow bg-light" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
-            {% block blog-content %}
-            {% endblock blog-content %}
+            <!-- Blog list Start -->
+            <div class="col-lg-8">
+                <div class="row g-5">
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn blog-card" data-wow-delay="0.1s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" alt="">
+                                <a class="position-absolute sticky-tagbar top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Web Design</a>
+                            </div>
+                            <div class="p-4 blog-box-content">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">How to build a website</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase redirecting-link" href="/detail">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog list End -->
+
             <!-- Sidebar Start -->
             <div class="col-lg-4">
                 <!-- Search Form Start -->

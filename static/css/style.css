@@ -1,4 +1,14 @@
-a{
+/* is this working? */
+
+@media (max-width: 900px) {
+    .ui_box {
+        width: 400px !important;
+        /* height: 220px; */
+        float: none !important;
+    }
+}
+
+a {
     text-decoration: none;
 }
 
@@ -103,6 +113,17 @@ h6,
     border-radius: 56px;
     border: 1px solid #1200ff;
     padding-right: 8px;
+    color: white;
+}
+
+.btn-join-our-team:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: transparent 0px 0px 0px 50px inset;
+    background: linear-gradient(to left, #00e5ff, #1200ff);
+    border-radius: 56px;
+    border: 1px solid #1200ff;
+    padding-right: 8px;
+    color: white;
 }
 
 .btn-primary,
@@ -177,8 +198,10 @@ h6,
 }
 
 .navbar-dark .navbar-toggler {
-    color: var(--primary) !important;
-    border-color: var(--primary) !important;
+    background: linear-gradient(to right, #00e5ff, #1200ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-image: linear-gradient(to right, #ff0a6c, #2d27ff) 1;
 }
 
 .navbar-collapse .btn .fa-search {
@@ -405,7 +428,7 @@ h6,
 
 /* facts start */
 .facts-background {
-    background-image: url('../images/img/facts-bg.png');
+    background-image: url('/static/images/img/facts-bg.png');
 }
 
 .container-fluid .fa-users {
@@ -433,6 +456,11 @@ h6,
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
+
+/* .d-flex .d-flex {
+    background: radial-gradient(circle, #1200ff, #00e5ff);
+    background-color: orange;
+} */
 
 .small-box .small-gradient-box {
     background: radial-gradient(circle, #1200ff, #00e5ff);
@@ -465,7 +493,8 @@ h6,
 }
 
 #parallax {
-    background-image: url('../images/img/parallax-bg.png');
+    /* height: 700px; */
+    background-image: url('/static/images/img/parallax-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -574,6 +603,12 @@ h6,
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
+}
+
+.icon-div .social-icons {
+    background: linear-gradient(to right, #00e5ff, #1200ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .pricing-content .btn-primary{
@@ -704,9 +739,13 @@ h6,
 }
 /* Blog End */
 
+/* Blog Detail Start */
+
+/* Blog Detail End */
+
 /* footer start */
 .footer-background {
-    background-image: url('../images/img/footer-bg.png');
+    background-image: url('/static/images/img/footer-bg.png');
 }
 
 .footer-about .flex-column {
@@ -740,17 +779,17 @@ h6,
     background: linear-gradient(#00e5ff, #1200ff);
     color: white;
   }
-  
+
   .modle-title {
     color: white;
   }
   
-  .modle-body {
+  .modle-bg {
     padding: 20px;
     background-color: #EEF9FF;
   }
 
-  .modle-body h4 {
+  .modle-bg h4 {
     background: linear-gradient(to right, #00e5ff, #1200ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -862,7 +901,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/img/carousel-bg.png) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(/static/images/img/carousel-bg.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -904,7 +943,7 @@ h6,
 
 /* order section start */
 .gradient-custom {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/img/carousel-bg.png) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(/static/images/img/carousel-bg.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -1005,8 +1044,7 @@ element.style {
 }
 
 .box-ui {
-    
-    margin: -8% auto;
+    margin: -8% auto 3%;
     display: flex;
 }
 
@@ -1192,7 +1230,7 @@ dl, ul, ul li {
 
 .recent-warpper {
     background-color: #00e5ff;
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/img/portfolio-bg.png) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(/static/images/img/portfolio-bg.png) center center no-repeat;
     background-size: cover;
 }
 .recent-warpper {
@@ -1223,87 +1261,90 @@ dl, ul, ul li {
 }
 /* portfolio end */
 
-
-
 /* Whatsapp button start */
-.phone-call {
-    width: 50px;
-    height: 50px;
-    left: 20px;
-    bottom: 20px;
-    background: #10b418;
-    position: fixed;
-    text-align: center;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 99;
-  display: inline-block;
-  line-height: 46px;
-}
-
-.phone-call:before {
-    position: absolute;
-    content: " ";
-    z-index: -1;
-    top: -15px;
-    left: -15px;
-    background-color: #10b418;
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-    opacity: 0.6;
-    -webkit-animation: pulse 1s ease-out;
-    animation: pulse 1.8s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        -webkit-transform: scale(0);
-        opacity: 0;
-    }
-    25% {
-        -webkit-transform: scale(0.3);
-        opacity: 1;
-    }
-    50% {
-        -webkit-transform: scale(0.6);
-        opacity: .6;
-    }
-    75% {
-        -webkit-transform: scale(0.9);
-        opacity: .3;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        opacity: 0;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    25% {
-        transform: scale(0.3);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.6);
-        opacity: .6;
-    }
-    75% {
-        transform: scale(0.9);
-        opacity: .3;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
+            .phone-call {
+            width: 50px;
+            height: 50px;
+            left: 20px;
+            bottom: 20px;
+            background: #10b418;
+            position: fixed;
+            text-align: center;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 99;
+          display: inline-block;
+          line-height: 46px;
+        }
+        
+        .phone-call:before {
+            position: absolute;
+            content: " ";
+            z-index: -1;
+            top: -15px;
+            left: -15px;
+            background-color: #10b418;
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+            opacity: 0.6;
+            -webkit-animation: pulse 1s ease-out;
+            animation: pulse 1.8s ease-out;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(0);
+                opacity: 0;
+            }
+            25% {
+                -webkit-transform: scale(0.3);
+                opacity: 1;
+            }
+            50% {
+                -webkit-transform: scale(0.6);
+                opacity: .6;
+            }
+            75% {
+                -webkit-transform: scale(0.9);
+                opacity: .3;
+            }
+            100% {
+                -webkit-transform: scale(1);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            25% {
+                transform: scale(0.3);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(0.6);
+                opacity: .6;
+            }
+            75% {
+                transform: scale(0.9);
+                opacity: .3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
 /* Whatsapp button end */
+
+
+/* ChatBot Start */
+
+/* ChatBot End */
