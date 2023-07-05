@@ -8,8 +8,9 @@ from django.contrib.auth.models import User
 
 
 def home(request):
-  
-    return render(request, 'user/index.html')
+    client=loveFromClient.objects.all().order_by('-id')
+    feedback = {"clientFeed":client}
+    return render(request, 'user/index.html',feedback)
 
 
 def about(request):
@@ -17,18 +18,35 @@ def about(request):
 
 
 def services(request):
-    
-    return render(request, 'user/services.html')
+    client=loveFromClient.objects.all().order_by('-id')
+    feedback = {"clientFeed":client}
+    return render(request, 'user/services.html',feedback)
 
 
 def contact(request):
-    return render(request, 'user/contactus.html')
+    save=False
+    if request.method == "POST":
+        Name=request.POST.get('name')
+        Email=request.POST.get('email')
+        Subject=request.POST.get('subject')
+        Message=request.POST.get('message')
+        contactus(name=Name,subject=Subject,email=Email,message=Message).save()
+        save=True
+    return render(request, 'user/contactus.html', context={"message" : save})
 
 def quote(request):
-    return render(request, 'user/quote.html')
+    save = False
+    if request.method == "POST":
+        Name = request.POST.get('Name')
+        Email = request.POST.get('Email')
+        Service = request.POST.get('Service')
+        Message = request.POST.get('Message')
+        requestQuote(Name=Name,Email=Email,SelectedService=Service,Message=Message).save()
+        save = True
+    return render(request, 'user/quote.html', context={"Quote": save})
 
 def blog(request):
-    return render(request, 'user/blog.html')
+    return render(request, 'user/blogList.html')
 
 def features(request):
     return render(request,'user/feature.html')
@@ -38,6 +56,9 @@ def order(request):
 
 def price(request):
     return render(request,'user/price.html')
+
+def blogDetail(request):
+    return render(request,'user/blogDetails.html')
 # signup
 def handleSignUp(request):
     if request.method=="POST":

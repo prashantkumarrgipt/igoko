@@ -12,6 +12,7 @@ urlpatterns = [
     path("feature/", views.features),
     path("orders/", views.order),
     path("price/", views.price),
+    path("detail/", views.blogDetail),
 
     
     path('signup', views.handleSignUp, name="handleSignUp"),
