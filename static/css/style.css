@@ -428,7 +428,7 @@ h6,
 
 /* facts start */
 .facts-background {
-    background-image: url('/static/images/img/facts-bg.png');
+    background-image: url('../images/img/facts-bg.png');
 }
 
 .container-fluid .fa-users {
