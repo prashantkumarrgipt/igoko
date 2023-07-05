@@ -440,7 +440,7 @@ h6,
 
 /* about start */
 .about-background {
-    background-image: url('/static/images/img/about-bg.png');
+    background-image: url('../images/img/about-bg.png');
     background-size: cover;
 }
 
