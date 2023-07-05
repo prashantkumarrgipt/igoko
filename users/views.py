@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from .models import *
 from django.contrib import messages
@@ -52,6 +53,10 @@ def blog(request):
 
 
 def recentBlog(request):
+    if request.method=="GET":
+        a=request.GET.get('search')
+        if a is not None:
+            blogSiteBackend.objects.all().filter(Q(blogRelatedTitle__icontains=a) | Q(writterName__icontains=a) |Q(blogTitle__icontains=a) | Q(blogDetail__icontains=a))
     mainBlog = blogSiteBackend.objects.all().order_by('id')
     blogCntxt = {"blogBackend":mainBlog}
     return render(request, 'user/blog.html', blogCntxt)
