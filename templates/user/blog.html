@@ -59,36 +59,15 @@
                     <div class="section-title section-title-sm position-relative pb-3 mb-4">
                         <h3 class="mb-0">Recent Post</h3>
                     </div>
+
+                    {% for mainBlog in blogBackend %}
                     <div class="d-flex bg-light blog-box-content rounded overflow-hidden mb-3">
-                        <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                        <img class="img-fluid" src="/{{mainBlog.blogImage}}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="/detail?msg={{mainBlog.id}}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">{{mainBlog.blogTitle}}
                         </a>
                     </div>
-                    <div class="d-flex rounded blog-box-content overflow-hidden mb-3">
-                        <img class="img-fluid" src="{% static 'images/img/blog-2.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex rounded blog-box-content overflow-hidden mb-3">
-                        <img class="img-fluid" src="{% static 'images/img/blog-3.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex rounded blog-box-content overflow-hidden mb-3">
-                        <img class="img-fluid" src="{% static 'images/img/blog-1.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex rounded blog-box-content overflow-hidden mb-3">
-                        <img class="img-fluid" src="{% static 'images/img/blog-2.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex rounded blog-box-content overflow-hidden mb-3">
-                        <img class="img-fluid" src="{% static 'images/img/blog-3.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
-                        </a>
-                    </div>
+
+                    {% endfor %}
                 </div>
                 <!-- Recent Post End -->
                 

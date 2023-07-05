@@ -35,3 +35,16 @@ class loveFromClient(models.Model):
     clientMessage = models.TextField()
 
  # love from client models end       
+
+
+
+# blog list models start
+
+class blogSiteBackend(models.Model):
+    blogImage = models.ImageField(upload_to="static/blog/Blog Image", null=True)
+    blogRelatedTitle = models.CharField(max_length=50)
+    writterName = models.CharField(max_length=50)
+    publishDate = models.DateField()
+    blogTitle = models.CharField(max_length=200)
+    blogDetail = models.TextField()
+# blog list models end
