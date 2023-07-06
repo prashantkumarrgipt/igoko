@@ -48,3 +48,21 @@ class blogSiteBackend(models.Model):
     blogTitle = models.CharField(max_length=200)
     blogDetail = models.TextField()
 # blog list models end
+
+
+# newsletter
+
+class newsletter(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    # number = models.IntegerField()
+    # # service = models.CharField(max_length=100)
+    # SERVICE=(
+    #     ('Web Designing','Web Designing'),
+    #     ('Email Marketing','Email Marketing'),
+    #     ('SEO','SEO'),
+    # )
+    # service_options=models.CharField(choices=SERVICE,max_length=200,default="")
+    specialNotes = models.TextField()
+    def __str__(self):
+        return self.name
