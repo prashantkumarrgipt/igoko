@@ -79,7 +79,9 @@ def features(request):
     return render(request,'user/feature.html')
 
 def order(request):
-    return render(request,'user/orders.html')
+    item = productItem.objects.all().order_by('-id')
+    prdctItem = {"orderItem":item}
+    return render(request,'user/orders.html', prdctItem)
 
 def price(request):
     return render(request,'user/price.html')

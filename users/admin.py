@@ -8,9 +8,9 @@ class contactusAdmin(admin.ModelAdmin):
 admin.site.register(contactus,contactusAdmin)
 
 
-class productAdmin(admin.ModelAdmin):
-    list_display=('id','title','image')
-admin.site.register(product,productAdmin)
+class productItemAdmin(admin.ModelAdmin):
+    list_display=('id','title','image','price','productInclude')
+admin.site.register(productItem,productItemAdmin)
 
 
 class loveFromClientAdmin(admin.ModelAdmin):
