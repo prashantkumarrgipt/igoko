@@ -1,4 +1,4 @@
-from django.urls import path,include
+from django.urls import path
 from . import views
 
 
@@ -13,8 +13,7 @@ urlpatterns = [
     path("orders/", views.order),
     path("price/", views.price),
     path("detail/", views.blogDetail),
-
+    path("logout/", views.logout),
     
-    path('accounts/', include('allauth.urls')),
     
 ]

@@ -1,7 +1,7 @@
+{% load socialaccount %}
+{% providers_media_js %}    
 <!DOCTYPE html>
 {% load static %}
-{% load socialaccount %}
-{% providers_media_js %} 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -95,9 +95,28 @@
                 <a href="/blog" class="nav-item nav-link {% block activeblog %}{% endblock  %}">Blog</a>
                 <a href="/contactUs" class="nav-item nav-link {% block activecontact %}{% endblock  %}">Contact</a>
             </div>
-            <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-            <butaton type="button" class="btn btn-primary"><a class="nav-link" href="{% provider_login_url "facebook" method="js_sdk" %}">Facebook Login</a></butaton>
-            <butaton type="button" class="btn btn-primary"><a class="nav-link" href="{% provider_login_url "google"" %}">Google</a></butaton>
+            <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+            {% if user.is_authenticated %}
+				<ul class="navbar-nav header-login">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle " href='#' id="navbarDropdown" role="button"
+							data-toggle="dropdown"> <i class="bi bi-person-bounding-box"></i> {{request.user}}</a>
+						<div class="dropdown-menu logout-style" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/logout">Logout</a>
+						</div>
+					</li>
+				</ul>
+				{% else %}
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Login
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% provider_login_url "google" %}">Login with Google</a></li>
+                      <li><a class="dropdown-item" href="{% provider_login_url "facebook" method="js_sdk" %}">Login with Facebook</a></li>
+                    </ul>
+                  </div>
+			{% endif %}
         </div>
     </nav>
 

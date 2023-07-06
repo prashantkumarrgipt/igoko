@@ -2,9 +2,9 @@ from django.db.models import Q
 from django.shortcuts import render
 from .models import *
 from django.contrib import messages
-from django.shortcuts import render,HttpResponse , redirect
-from django.contrib.auth  import authenticate,  login, logout
-from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib import auth
 # Create your views here.
 
 
@@ -85,3 +85,9 @@ def order(request):
 
 def price(request):
     return render(request,'user/price.html')
+
+
+@login_required
+def logout(request):
+    auth.logout(request)
+    return redirect('home')
