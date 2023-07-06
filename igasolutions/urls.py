@@ -21,7 +21,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
-
 ]
 
 admin.site.site_header = "IGA solutions Administrator"

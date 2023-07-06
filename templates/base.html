@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+{% load socialaccount %}
+{% providers_media_js %} 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,6 +96,8 @@
                 <a href="/contactUs" class="nav-item nav-link {% block activecontact %}{% endblock  %}">Contact</a>
             </div>
             <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+            <butaton type="button" class="btn btn-primary"><a class="nav-link" href="{% provider_login_url "facebook" method="js_sdk" %}">Facebook Login</a></butaton>
+            <butaton type="button" class="btn btn-primary"><a class="nav-link" href="{% provider_login_url "google"" %}">Google</a></butaton>
         </div>
     </nav>
 

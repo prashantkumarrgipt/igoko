@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 
@@ -15,7 +15,6 @@ urlpatterns = [
     path("detail/", views.blogDetail),
 
     
-    path('signup', views.handleSignUp, name="handleSignUp"),
-    path('login', views.handeLogin, name="handleLogin"),
-    path('logout', views.handelLogout, name="handleLogout"),
+    path('accounts/', include('allauth.urls')),
+    
 ]
