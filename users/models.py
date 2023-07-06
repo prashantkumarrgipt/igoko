@@ -19,11 +19,11 @@ class contactus(models.Model):
     def __str__(self):
         return self.name
     
-
-class product(models.Model):
+class productItem(models.Model):
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="static/services/products", null=True)
-    url = models.CharField(max_length=100, default=' ')
+    image = models.ImageField(upload_to="static/products/productItems", null=True)
+    price = models.IntegerField()  
+    productInclude = models.TextField(null=True)
 
 
 # love from client models start 
