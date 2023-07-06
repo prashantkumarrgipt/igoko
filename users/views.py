@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from .models import *
 from django.contrib import messages
@@ -46,7 +47,26 @@ def quote(request):
     return render(request, 'user/quote.html', context={"Quote": save})
 
 def blog(request):
-    return render(request, 'user/blogList.html')
+    mainBlog = blogSiteBackend.objects.all().order_by('id')
+    blogCntxt = {"blogBackend":mainBlog}
+    return render(request, 'user/blogList.html', blogCntxt)
+
+
+def recentBlog(request):
+    if request.method=="GET":
+        a=request.GET.get('search')
+        if a is not None:
+            blogSiteBackend.objects.all().filter(Q(blogRelatedTitle__icontains=a) | Q(writterName__icontains=a) |Q(blogTitle__icontains=a) | Q(blogDetail__icontains=a))
+    mainBlog = blogSiteBackend.objects.all().order_by('id')
+    blogCntxt = {"blogBackend":mainBlog}
+    return render(request, 'user/blog.html', blogCntxt)
+
+def blogDetail(request):
+    blogSequence = request.GET.get('msg')
+    mainBlog = blogSiteBackend.objects.all().filter(id=blogSequence)
+    blogCntxt = {"blogBackend":mainBlog}
+    return render(request, 'user/blogDetails.html', blogCntxt)
+
 
 def features(request):
     return render(request,'user/feature.html')
@@ -57,8 +77,9 @@ def order(request):
 def price(request):
     return render(request,'user/price.html')
 
-def blogDetail(request):
-    return render(request,'user/blogDetails.html')
+
+
+
 # signup
 def handleSignUp(request):
     if request.method=="POST":
