@@ -55,7 +55,6 @@
 {% endblock carousel-start %}
 {% block body-content %}
 
- 
 
 
    
@@ -526,16 +525,17 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s" style="background: linear-gradient(to right, #00e5ff, #1200ff);">
-                        <form>
+                        <form method="post" class="needs-validation" novalidate>
+                            {% csrf_token %}
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" name="Name" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="form-control bg-light border-0" name="notes" rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn w-100 py-3" type="submit">Subscribe</button>

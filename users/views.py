@@ -10,7 +10,14 @@ from django.contrib.auth.models import User
 
 def home(request):
     client=loveFromClient.objects.all().order_by('-id')
-    feedback = {"clientFeed":client}
+    save=False
+    if request.method == "POST":
+        Name=request.POST.get('Name')
+        email=request.POST.get('email')
+        notes=request.POST.get('notes')
+        newsletter(name=Name,email=email,specialNotes=notes).save()
+        save=True
+    feedback = {"clientFeed":client,"message" : save}
     return render(request, 'user/index.html',feedback)
 
 
