@@ -5,6 +5,8 @@ from django.contrib import messages
 from django.shortcuts import render,HttpResponse , redirect
 from django.contrib.auth  import authenticate,  login, logout
 from django.contrib.auth.models import User
+
+# from .forms import JoinTeamForm
 # Create your views here.
 
 
@@ -149,3 +151,27 @@ def handelLogout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
     return redirect(request.META.get('HTTP_REFERER', 'home'))
+
+
+def join_team(request):
+    save=False
+    if request.method == "POST":
+        email_address=request.POST.get('emailAddress')
+        full_name=request.POST.get('fullName')
+        address=request.POST.get('address')
+        phone_number=request.POST.get('phoneNumber')
+        gender=request.POST.get('gender')
+        colgName=request.POST.get('colgName')
+        colgAddress=request.POST.get('colgAddress')
+        qualification=request.POST.get('qualification')
+        spendTime=request.POST.get('spendTime')
+        availablityTime=request.POST.get('availablityTime')
+        internshipdate=request.POST.get('internshipdate')
+        internshiparea=request.POST.get('internshiparea')
+        desktopornot=request.POST.get('desktopornot')
+        internshippurpose=request.POST.get('internshippurpose')
+        anysuggestion=request.POST.get('anysuggestion')
+        JoinTeam(email_address=email_address,full_name=full_name,address=address,phone_number=phone_number,gender=gender,colg_name=colgName,colg_address=colgAddress,qualification=qualification,spend_time=spendTime,availablity_time=availablityTime,internship_date=internshipdate,internship_area=internshiparea,desktop_or_not=desktopornot,internship_type=internshippurpose,any_suggestion=anysuggestion).save()
+        save=True
+    context = {"message2" : save}
+    return render(request, 'user/index.html',context)

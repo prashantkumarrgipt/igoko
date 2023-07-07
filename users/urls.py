@@ -13,7 +13,8 @@ urlpatterns = [
     path("orders/", views.order),
     path("price/", views.price),
     path("detail/", views.blogDetail),
-
+    path('joinourteam', views.join_team, name="join_team"),
+    
     
     path('signup', views.handleSignUp, name="handleSignUp"),
     path('login', views.handeLogin, name="handleLogin"),
