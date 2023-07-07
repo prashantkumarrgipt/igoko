@@ -74,6 +74,12 @@
     Thank you for subscribing to our newsletter.
   </div>
 {% endif %}
+
+{% if message2 %}
+<div class="alert alert-success mb-0" role="alert">
+    Thank you for joining our team.
+  </div>
+{% endif %}
 <!-- Topbar End -->
 
 
@@ -293,7 +299,7 @@
 
 
      <!-- Join our team form -->
-     <div class="modal fade join-team-border" id="jointeam" tabindex="-1" aria-labelledby="jointeamModal" aria-hidden="true">
+     {% comment %} <div class="modal fade join-team-border" id="jointeam" tabindex="-1" aria-labelledby="jointeamModal" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header modle-header">
@@ -640,8 +646,187 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> {% endcomment %}
 
+    <div class="modal fade join-team-border" id="jointeam" tabindex="-1" aria-labelledby="jointeamModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header modle-header">
+              <h2 class="modal-title modle-title fs-5" id="jointeamModalTitle">Fill the form</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modle-body">
+                <form action="/joinourteam" method="POST">
+                    {% csrf_token %}
+                      <fieldset>
+                          <h4>Join Our Team</h4><br>
+                      </fieldset>
+                      <fieldset>
+                          <legend for="">Email</legend>
+                          <div class="form-group">
+                              <input id="emailAddress" type="email" name="emailAddress" class="form-control" placeholder="example123@gmail.com" required>
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend >Full Name</legend>
+                          <div class="form-group">
+                              <input type="text" name="fullName" class="form-control" placeholder="Your good name" required>
+                          </div>
+                      </fieldset>
+                  
+                      <fieldset>
+                          <legend>Address</legend>
+                          <div class="form-group">
+                              <textarea name="address" class="form-control" placeholder="Karawal Nagar, North East Delhi-110094, India" required></textarea>
+                          </div>
+                      </fieldset>
+                  
+                      <fieldset>
+                          <legend >Phone number(Same as Whats&#x27;App)</legend>
+                          <div class="form-group">
+                              <input type="text" name="phoneNumber" class="form-control" placeholder="9012345678" required>
+                          </div>
+                      </fieldset>
+                  
+                      <fieldset>
+                          <legend>Gender</legend>
+                          <div class="form-group">
+                            <select class="form-select border-0" name="gender" id="validationTooltip02" required>
+                              <option selected>Select your gender</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Others">other</option>
+                            </select>
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend>Name of Institute(College Name/University Name/School Name)</legend>
+                          <div class="form-group">
+                              <input type="text" name="colgName" class="form-control" required>
+                          </div>
+                      </fieldset>
+                  
+                      <fieldset>
+                          <legend>Address of Institute</legend>
+                          <div class="form-group">
+                              <input type="text" name="colgAddress" class="form-control" required>
+                          </div>
+                      </fieldset>
+                  
+                      <fieldset>
+                          <legend >Highest Academic Qualification (Most recent or currently pursuing academic degree) Note:- If you&#x27;re a School student please select others</legend>
+                          <div class="form-group">
+                            
+                            <select class="form-select border-0" name="qualification" id="validationTooltip02" required>
+                              <option selected>Select your Qualification</option>
+                              <option value="B.A/B.Com/BBA/B.Ed/Diploma">B.A/B.Com/BBA/B.Ed/Diploma</option>
+                              <option value="BCA/B.Tech/BE/B.Sc">BCA/B.Tech/BE/B.Sc</option>
+                              <option value="M.A/M.Com/MBA/MCA/M.Ed/PG Diploma/PG Program">M.A/M.Com/MBA/MCA/M.Ed/PG Diploma/PG Program</option>
+                              <option value="MCA/M.Tech/M.Sc">MCA/M.Tech/M.Sc</option>
+                              <option value="Others">Others</option>
+                            </select>
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend >How much time could you spend at per day? </legend>
+                          <div class="form-group">
+                            <select class="form-select border-0" name="spendTime" id="validationTooltip02" required>
+                              <option selected>Select</option>
+                              <option value="lessthan2hour">&lt;2hour</option>
+                              <option value="3-4hours">3-4hours</option>
+                              <option value="5hours">5hours</option>
+                              <option value="Morethan5hours">More than 5hours</option>
+                            </select>
+                          </div>
+                      </fieldset>
+                  
+                      <fieldset>
+                          <legend >If you are a student, interested in this internship, please indicate your availablity </legend>
+                          <div class="form-group">
+                            <input type="text" name="availablityTime" class="form-control">
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend>What is your preferred start date for an internship? *
+                          This is not a binding answer that locks you in -- it&#x27;s just to help us get an idea of the timeframe that you have in mind. </legend>
+                          <div class="form-group">
+                              <input type="date" name="internshipdate" class="form-control calendar" required>
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend>Which field/sector you interest most in this Internship</legend>
+                          <div class="form-group">
+                            <select class="form-select border-0" name="internshiparea" id="validationTooltip02" required>
+                              <option selected>Select</option>
+                              <option value="Campaign manager">Campaign manager</option>
+                              <option value="Business Development Assicoate (BDA)">Business Development Assicoate (BDA)</option>
+                              <option value="Human Resource (HR)">Human Resource (HR)</option>
+                              <option value="Social Media Marketing intern">Social Media Marketing intern</option>
+                              <option value="Digital marketing Intern">Digital marketing Intern</option>
+                              <option value="Web Developer">Web Developer</option>
+                              <option value="Graphic Designer">Graphic Designer</option>
+                              <option value="Campus Ambassder">Campus Ambassder</option>
+                            </select>
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend>Do you have a Desktop/laptop or a Smartphone with proper Internet connection</legend>
+                          <div class="form-group">
+                              
+                            <select class="form-select border-0" name="desktopornot" id="validationTooltip02" required>
+                              <option selected>Select</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </div>
+                      </fieldset>
+                  
+                  
+                      <fieldset>
+                          <legend>Internship you&#x27;re looking for?</legend>
+                          <div class="form-group" style="margin-bottom: 18px;">
+                              
+                            <select class="form-select border-0" name="internshippurpose" id="validationTooltip02" required>
+                              <option selected>Select</option>
+                              <option value="Internship for college credit">Internship for college credit</option>
+                              <option value="Summer Internship">Summer Internship</option>
+                              <option value="Non-profit Internship">Non-profit Internship</option>
+                              <option value="Co-OP(Coperative Education)">Co-OP(Coperative Education)</option>
+                              <option value="Externship">Externship</option>
+                              <option value="Learning purpose">Learning purpose</option>
+                            </select>
+      
+                          </div>
+                      </fieldset>
+      
+                      <fieldset>
+                          <legend>Any Suggestion/opinion please share 
+                          This is the open platform in which you can share your valuable thaughts,idea,suggestion.</legend>
+                          <div class="form-group">
+                              <textarea name="anysuggestion" class="form-control" ></textarea>
+                          </div>
+                      </fieldset>
+                  
+                      <input class="btn btn-primary" type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="modal-footer modle-footer">
+            </div>
+          </div>
+        </div>
+      </div>
 
     
     <!-- JavaScript Libraries -->

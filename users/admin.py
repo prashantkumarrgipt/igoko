@@ -33,3 +33,8 @@ admin.site.register(blogSiteBackend,blogSiteBackendAdmin)
 class newsletterAdmin(admin.ModelAdmin):
     list_display=('id','name','email','specialNotes')
 admin.site.register(newsletter,newsletterAdmin)
+
+
+class jointeamAdmin(admin.ModelAdmin):
+    list_display=('full_name','gender','phone_number','qualification')
+admin.site.register(JoinTeam,jointeamAdmin)
