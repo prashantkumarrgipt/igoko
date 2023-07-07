@@ -107,15 +107,17 @@
 					</li>
 				</ul>
 				{% else %}
-                <div class="dropdown">
+                <!-- -->
+                <button class="btn btn-primary"><a href="{% url 'account_login' %} " class="text-light"> LOGIN</a></button>
+                <!-- <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Login
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{% provider_login_url "google" %}">Login with Google</a></li>
-                      <li><a class="dropdown-item" href="{% provider_login_url "facebook" method="js_sdk" %}">Login with Facebook</a></li>
+                      <li><a class="dropdown-item" href="{% provider_login_url 'google' %}">Login with Google</a></li>
+                      <li><a class="dropdown-item" href="{% provider_login_url 'facebook' method='js_sdk' %}">Login with Facebook</a></li>
                     </ul>
-                  </div>
+                  </div> -->
 			{% endif %}
         </div>
     </nav>

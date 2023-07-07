@@ -86,8 +86,3 @@ def order(request):
 def price(request):
     return render(request,'user/price.html')
 
-
-@login_required
-def logout(request):
-    auth.logout(request)
-    return redirect('home')
